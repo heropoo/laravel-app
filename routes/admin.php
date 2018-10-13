@@ -6,7 +6,7 @@
  * Time: 17:17
  */
 
-Route::get('login','LoginController@showLoginForm')->name('admin-login');
+Route::get('login','LoginController@showLoginForm');
 Route::post('login','LoginController@login');
 Route::get('logout','LoginController@logout');
 Route::group(['middleware' => ['auth:admin']], function(){
